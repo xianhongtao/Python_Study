@@ -1,10 +1,11 @@
+import math
+
 Number = int(input("请输入一个整数："))
 IsPrime = True
 TensPlace = 1
 i = 1
 
-while (TensPlace*10)**2 < Number:
-    TensPlace += 1
+TensPlace = math.ceil(math.sqrt(Number)/10)
 
 if Number <= 1:
     IsPrime = False
