@@ -1,15 +1,8 @@
-import math,time
-def isPrime(num):
-    if num<=1:
-        return False
-    for i in range(2,int(math.sqrt(num))):
-        if(num%i == 0):
-            return False
-    return True
-num = int(input(":"))
-#开始计时
-start = time.time()
-print(isPrime(num))
-#结束计时
-end = time.time()
-print("运行时间：",end-start)
+import jieba
+import jieba.analyse
+
+String = "我是一个中国人，我爱我的祖国"
+# 使用默认分词
+seg_list = jieba.cut(String, cut_all=False)
+#输出分词
+print("Default Mode: " + "/ ".join(seg_list))
