@@ -2,20 +2,20 @@ import math,time
 
 Number = int(input("请输入一个整数："))
 IsPrime = True
-TensPlace = 1
+MaxDivisorDigit = 1
 
 #开始计时
 start = time.time()
 
-TensPlace = math.ceil(math.sqrt(Number)/10)
+MaxDivisorDigit = math.ceil(math.sqrt(Number)/10)
 
 if Number <= 1:
     IsPrime = False
 if Number % 2 == 0 or Number % 3 == 0 or Number % 5 == 0 or Number % 7 == 0:
     IsPrime = False
 
-for i in range(1 , TensPlace+1):
-    if Number % (i*10+1) == 0 or Number % (i*10+3) == 0 or Number % (i*10+7) == 0 or Number % (i*10+9) == 0:
+for divisor_index in range(1 , MaxDivisorDigit+1):
+    if Number % (divisor_index*10+1) == 0 or Number % (divisor_index*10+3) == 0 or Number % (divisor_index*10+7) == 0 or Number % (divisor_index*10+9) == 0:
         IsPrime = False
 
 if Number in (2 , 3 , 5 , 7, 11 , 13 , 17 , 19):
