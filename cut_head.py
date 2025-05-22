@@ -1,6 +1,6 @@
-print ("请输入一个整数：")
+print("请输入一个整数：")
 input_number = int(input())
-print ("请输入要消除的数位：")
+print("请输入要消除的数位：")
 cut_head = int(input())
 var1 = input_number
 var2 = 0

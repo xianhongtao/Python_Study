@@ -5,6 +5,7 @@ varb = random.randint(100, 1000)
 if vara > varb:
     vara, varb = varb, vara
 
+
 def is_prime(n):
     if n <= 1:
         return False
@@ -13,11 +14,13 @@ def is_prime(n):
             return False
     return True
 
+
 def find_next_prime(n):
     next_num = n + 1
     while not is_prime(next_num):
         next_num += 1
     return next_num
+
 
 minimun_prime = find_next_prime(vara)
 
